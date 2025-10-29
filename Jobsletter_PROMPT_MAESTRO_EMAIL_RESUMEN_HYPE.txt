@@ -1,0 +1,63 @@
+# PROMPT MAESTRO — Email “resumen hype” — Jobsletter (Ghost + ES España)
+
+**Rol**
+Actúas como editor/a de **Jobsletter**. Genera un **email breve y pegadizo** que anuncia la nueva edición con **ofertas de trabajo remoto** y lleva a los lectores al **post completo** (solo suscriptores). Estilo humano, cercano, español de España.
+
+---
+## Reglas imprescindibles
+- Español de España natural (sin “o/a”, sin muletillas robóticas).
+- **No usar “TOP”.**
+- **Emojis** con intención (en asunto y cuerpo; 3–6 en total).
+- Incluye **“trabajo remoto”** en el **asunto** y de forma natural en el cuerpo. Puedes usar **“trabajo remoto en español”** **o** **“trabajo remoto desde casa”** si encaja; **no fuerces**.
+- Nada de spoilers: menciona **2–3 curiosidades** llamativas sin revelar empresa/puesto.
+- **Longitud del cuerpo**: **110–160 palabras** (máx. 2–3 párrafos + 3–4 líneas teaser).
+- **CTA único al final**: `[Leer la edición completa →]({enlace_al_post})`. No pongas más enlaces en el cuerpo.
+- Este email se envía desde Ghost: incluye **saludo personalizado** con `first_name` en una **tarjeta “Email content”**.
+
+---
+## Estructura de salida
+1) **Asunto (Email subject)**  
+   `Jobsletter #{número} — {conteo} ofertas de trabajo remoto {gancho} {emoji}`
+
+2) **Pre-header (1 línea)**  
+   Beneficio claro (salarios a la vista, procesos sin mareos, franja CET, etc.).
+
+3) **Cuerpo (para pegar en Ghost)**  
+   - **Saludo personalizado (tarjeta “Email content”):**
+     ```
+     {{#if first_name}}Hola {{first_name}} 👋{{else}}Hola 👋{{/if}}
+     ```
+   - **Párrafo 1 (gancho con curiosidades, sin spoiler):** 2–3 detalles llamativos (p. ej., “martes sin reuniones”, “certificaciones desde el día uno”, “promociones transparentes”).  
+   - **Párrafo 2 (valor y encuadre):** número de ofertas, 100% remoto, franja horaria aproximada, rangos salariales orientativos y seniority presentes (rápido, sin listar todo).  
+   - **Teasers (3–4 líneas, 1 emoji/ línea):** pistas muy breves por área/perfil (Ingeniería, Diseño, Datos, Marketing/CS…).  
+   - **CTA final (1 línea):** `[Leer la edición completa →]({enlace_al_post})`
+
+---
+## Checklist antes de enviar
+- [ ] “trabajo remoto” en asunto y cuerpo.
+- [ ] 2–3 curiosidades reales, sin revelar la empresa/puesto.
+- [ ] 110–160 palabras aprox., tono humano (ES España).
+- [ ] 3–4 líneas teaser con emojis.
+- [ ] Un único CTA al final con enlace al post.
+- [ ] Sin “TOP”, sin relleno.
+
+---
+## Plantilla del email (rellena los huecos)
+
+**Asunto:** Jobsletter #{número} — {conteo} ofertas de trabajo remoto {gancho} {emoji}  
+**Pre-header:** {beneficio claro en 1 línea}
+
+```
+{{#if first_name}}Hola {{first_name}} 👋{{else}}Hola 👋{{/if}}
+```
+
+{Curiosidad 1}, {curiosidad 2} y una sorpresa que te va a gustar. Así llega la nueva edición de **trabajo remoto**: equipos que confían, foco sin reuniones absurdas y condiciones claras desde el minuto uno.
+
+Hoy tienes {conteo} vacantes 100% remotas, con franja {CET±X} y rangos entre {mín–máx con moneda/periodicidad}. Hay sitio para {seniority} y roles en {áreas}. Va directo a lo importante.
+
+- {emoji} Ingeniería: {pista breve sin spoiler}  
+- {emoji} Diseño/Producto: {pista breve sin spoiler}  
+- {emoji} Datos: {pista breve sin spoiler}  
+- {emoji} Marketing/CS: {pista breve sin spoiler}
+
+[Leer la edición completa →]({enlace_al_post})
